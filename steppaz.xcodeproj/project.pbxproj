@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CED57FC42D764A2F00C3859D /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CED57FC32D764A2F00C3859D /* RiveRuntime */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		CEBA46C92D7281B600D7F4B2 /* steppaz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = steppaz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CED57FC42D764A2F00C3859D /* RiveRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = steppaz;
 			packageProductDependencies = (
+				CED57FC32D764A2F00C3859D /* RiveRuntime */,
 			);
 			productName = steppa;
 			productReference = CEBA46C92D7281B600D7F4B2 /* steppaz.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = CEBA46C02D7281B600D7F4B2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CED57FC22D76482000C3859D /* XCRemoteSwiftPackageReference "rive-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CEBA46CA2D7281B600D7F4B2 /* Products */;
 			projectDirPath = "";
@@ -251,7 +260,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"steppa/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"steppaz/Preview Content\"";
 				DEVELOPMENT_TEAM = F2DAZJL548;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -280,7 +289,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"steppa/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"steppaz/Preview Content\"";
 				DEVELOPMENT_TEAM = F2DAZJL548;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CED57FC22D76482000C3859D /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 6.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CED57FC32D764A2F00C3859D /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CED57FC22D76482000C3859D /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEBA46C12D7281B600D7F4B2 /* Project object */;
 }
