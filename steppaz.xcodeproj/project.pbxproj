@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CED57FC42D764A2F00C3859D /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = CED57FC32D764A2F00C3859D /* RiveRuntime */; };
+		CEDD839D2D7A5F6A0004C4E4 /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = CEDD839C2D7A5F6A0004C4E4 /* Auth */; };
+		CEDD839F2D7A5F6A0004C4E4 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = CEDD839E2D7A5F6A0004C4E4 /* PostgREST */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED57FC42D764A2F00C3859D /* RiveRuntime in Frameworks */,
+				CEDD839F2D7A5F6A0004C4E4 /* PostgREST in Frameworks */,
+				CEDD839D2D7A5F6A0004C4E4 /* Auth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,13 +66,17 @@
 			buildRules = (
 			);
 			dependencies = (
+				CEDD83A52D7A5FBB0004C4E4 /* PBXTargetDependency */,
+				CEDD83A32D7A5FB80004C4E4 /* PBXTargetDependency */,
+				CEDD83A12D7A5FB00004C4E4 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				CEBA46CB2D7281B600D7F4B2 /* steppaz */,
 			);
 			name = steppaz;
 			packageProductDependencies = (
-				CED57FC32D764A2F00C3859D /* RiveRuntime */,
+				CEDD839C2D7A5F6A0004C4E4 /* Auth */,
+				CEDD839E2D7A5F6A0004C4E4 /* PostgREST */,
 			);
 			productName = steppa;
 			productReference = CEBA46C92D7281B600D7F4B2 /* steppaz.app */;
@@ -101,7 +107,7 @@
 			mainGroup = CEBA46C02D7281B600D7F4B2;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				CED57FC22D76482000C3859D /* XCRemoteSwiftPackageReference "rive-ios" */,
+				CEDD839B2D7A5F6A0004C4E4 /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CEBA46CA2D7281B600D7F4B2 /* Products */;
@@ -132,6 +138,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEDD83A12D7A5FB00004C4E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CEDD83A02D7A5FB00004C4E4 /* Auth */;
+		};
+		CEDD83A32D7A5FB80004C4E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CEDD83A22D7A5FB80004C4E4 /* PostgREST */;
+		};
+		CEDD83A52D7A5FBB0004C4E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = CEDD83A42D7A5FBB0004C4E4 /* Supabase */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		CEBA46D52D7281BA00D7F4B2 /* Debug */ = {
@@ -335,21 +356,41 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CED57FC22D76482000C3859D /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+		CEDD839B2D7A5F6A0004C4E4 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/rive-app/rive-ios";
+			repositoryURL = "https://github.com/supabase/supabase-swift";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 6.7.2;
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CED57FC32D764A2F00C3859D /* RiveRuntime */ = {
+		CEDD839C2D7A5F6A0004C4E4 /* Auth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CED57FC22D76482000C3859D /* XCRemoteSwiftPackageReference "rive-ios" */;
-			productName = RiveRuntime;
+			package = CEDD839B2D7A5F6A0004C4E4 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		CEDD839E2D7A5F6A0004C4E4 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDD839B2D7A5F6A0004C4E4 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		CEDD83A02D7A5FB00004C4E4 /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDD839B2D7A5F6A0004C4E4 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		CEDD83A22D7A5FB80004C4E4 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDD839B2D7A5F6A0004C4E4 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		CEDD83A42D7A5FBB0004C4E4 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEDD839B2D7A5F6A0004C4E4 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
