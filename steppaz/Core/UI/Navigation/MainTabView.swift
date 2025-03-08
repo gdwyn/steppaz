@@ -9,9 +9,9 @@ import SwiftUI
 
 struct MainTabView: View {
     @StateObject private var homeViewModel = HomeViewModel()
-    @StateObject private var exploreViewModel = ExploreViewModel()
-    @StateObject private var leaderboardViewModel = LeaderboardViewModel()
-    @StateObject private var historyViewModel = HistoryViewModel()
+//    @StateObject private var exploreViewModel = ExploreViewModel()
+//    @StateObject private var leaderboardViewModel = LeaderboardViewModel()
+//    @StateObject private var historyViewModel = HistoryViewModel()
     
     var body: some View {
         TabView {
@@ -21,34 +21,34 @@ struct MainTabView: View {
                     Label("Home", systemImage: "house")
                 }
             
-            ExploreView()
-                .environmentObject(exploreViewModel)
+            HomeView()
+                .environmentObject(homeViewModel)
                 .tabItem {
                     Label("Explore", systemImage: "magnifyingglass")
                 }
             
-            LeaderboardView()
-                .environmentObject(leaderboardViewModel)
+            HomeView()
+                .environmentObject(homeViewModel)
                 .tabItem {
                     Label("Leaderboard", systemImage: "chart.bar")
                 }
             
-            HistoryView()
-                .environmentObject(historyViewModel)
+            HomeView()
+                .environmentObject(homeViewModel)
                 .tabItem {
                     Label("History", systemImage: "clock")
                 }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                NavigationLink(destination: ProfileView()) {
-                    ProfileAvatarView()
-                }
+//                NavigationLink(destination: ProfileView()) {
+//                    ProfileAvatarView()
+//                }
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
                 HStack {
-                    PointsView()
+                   // PointsView()
                     
                     Button(action: {
                         // Present new challenge sheet

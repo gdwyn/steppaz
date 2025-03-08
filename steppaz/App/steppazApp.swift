@@ -17,7 +17,7 @@ struct steppaApp: App {
                 MainTabView()
                     .environmentObject(authViewModel)
             } else {
-                WelcomeView()
+                MainTabView()
                     .environmentObject(authViewModel)
             }
         }
