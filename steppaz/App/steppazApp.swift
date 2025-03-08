@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct steppaApp: App {
+    @StateObject private var authViewModel = AuthViewModel()
+
     var body: some Scene {
         WindowGroup {
-            SplashView()
+            if authViewModel.isAuthenticated {
+                MainTabView()
+                    .environmentObject(authViewModel)
+            } else {
+                WelcomeView()
+                    .environmentObject(authViewModel)
+            }
         }
     }
 }
